@@ -1,11 +1,13 @@
 <?xml version='1.0' encoding='utf-8'?>
 <plugin id="mike" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
     <name>mike</name>
-    <js-module name="mike" src="www/mike.js"><clobbers target="cordova.plugins.mike"/>
+    <js-module name="mike" src="www/mike.js">
+        <clobbers target="window.plugins.mike"/>
     </js-module>
     <platform name="android">
         <config-file parent="/*" target="res/xml/config.xml">
-            <feature name="mike"><param name="android-package" value="mike.mike"/>
+            <feature name="mike">
+                <param name="android-package" value="mike.mike"/>
             </feature>
         </config-file>
         <config-file parent="/*" target="AndroidManifest.xml"></config-file>
